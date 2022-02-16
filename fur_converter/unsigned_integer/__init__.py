@@ -12,7 +12,7 @@ def encode():
     binary = bin(data)[2:]
     binary = str(binary)
 
-    return {"binary": binary}
+    return binary
 
 
 @unsigned_integer.get("/unsigned_integer/decode")
@@ -22,4 +22,4 @@ def decode():
     data = int(binary, 2)
     data = str(data)
 
-    return {"data": data}
+    return data
