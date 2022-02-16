@@ -1,4 +1,3 @@
-from unicodedata import decimal
 from flask import request, Blueprint
 
 unsigned_integer = Blueprint('unsigned_integer', __name__)
