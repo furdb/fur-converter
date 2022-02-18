@@ -6,12 +6,16 @@ unsigned_integer = Blueprint('unsigned_integer', __name__)
 @unsigned_integer.get("/unsigned_integer/encode")
 def encode():
     data = request.args.get("data", '0')
+    size = request.args.get("size", '1')
 
     data = int(data)
     binary = bin(data)[2:]
-    binary = str(binary)
 
-    return binary
+    size = int(size)
+    rem = size - len(binary)
+    resized_binary = ('0' * rem) + binary
+
+    return resized_binary
 
 
 @unsigned_integer.get("/unsigned_integer/decode")
