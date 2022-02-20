@@ -1,9 +1,11 @@
 from flask import request, Blueprint
 
-unsigned_integer = Blueprint('unsigned_integer', __name__)
+id = 'unsigned_integer'
+
+unsigned_integer = Blueprint(id, __name__)
 
 
-@unsigned_integer.get("/unsigned_integer/encode")
+@unsigned_integer.get(f"/{id}/encode")
 def encode():
     data = request.args.get("data", '0')
     size = request.args.get("size", '1')
@@ -18,7 +20,7 @@ def encode():
     return resized_binary
 
 
-@unsigned_integer.get("/unsigned_integer/decode")
+@unsigned_integer.get(f"/{id}/decode")
 def decode():
     binary = request.args.get("binary", '0')
 
