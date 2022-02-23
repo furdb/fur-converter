@@ -17,7 +17,6 @@ def encode():
         while len(cur) < 8:
             cur = '0' + cur
         binary += cur
-        print(ord(c), bin(ord(c)))
 
     size = int(size)
     rem = size - len(binary)
