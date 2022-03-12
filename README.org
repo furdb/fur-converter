@@ -1,0 +1,23 @@
+#+TITLE: Fur Converter
+
+* Introduction
+A sample conversion server for [[https://github.com/madhavan-raja/furdb][FurDB]].
+
+* Installation
+Clone this repository using
+
+#+BEGIN_SRC bash
+  git clone https://github.com/madhavan-raja/fur-converter
+#+END_SRC
+
+Make sure you have Python installed. Create a virtual environment and install the required dependencies using
+
+#+BEGIN_SRC bash
+  pip install -r requirements.txt
+#+END_SRC
+
+And then, finally, start the server using
+
+#+BEGIN_SRC bash
+  python run.py
+#+END_SRC
