@@ -28,3 +28,19 @@ def decode():
     data = str(data)
 
     return data
+
+
+@unsigned_integer.get(f"/{id}/compare")
+def compare():
+    a = request.args.get("a", '0')
+    b = request.args.get("b", '0')
+
+    a = int(a, 2)
+    b = int(b, 2)
+
+    if a < b:
+        return "1"
+    elif a > b:
+        return "-1"
+    else:
+        return "0"
