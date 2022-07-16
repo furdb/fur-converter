@@ -10,4 +10,7 @@ def create_app():
     from .long_string import long_string
     app.register_blueprint(long_string)
 
+    from .word import word
+    app.register_blueprint(word)
+
     return app
